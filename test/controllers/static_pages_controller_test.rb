@@ -12,7 +12,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  
   test "should get home" do
     # getメソッドで、 'static_pages/home'にアクセスしたときに、200が帰ってくるか。
     # static_pages_home_urlはrouting を作成したときに、勝手に作られる。
@@ -20,7 +19,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     
     # HTMLのタイトルに、想定するタイトルがあるか確認する。
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
